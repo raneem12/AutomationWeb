@@ -1,5 +1,6 @@
 package com.atypon.automationframework.config;
 
+import com.atypon.automationframework.drivers.DriverUtils;
 import org.openqa.selenium.WebDriver;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -25,6 +26,6 @@ public class ClickLink extends Item {
     }
 
     public void doAction(WebDriver driver) {
-
+        DriverUtils.findElementByAll(driver, (getName())).click();
     }
 }

@@ -58,8 +58,8 @@ public class Main {
                 else if (item instanceof com.atypon.automationframework.config.ClickLink) {
                     DriverUtils.findElementByAll(driver, ((com.atypon.automationframework.config.ClickLink) item).getName()).click();
                 }
-                else if (item instanceof com.atypon.automationframework.config.AlertAcceptAction){
-                    com.atypon.automationframework.config.AlertAcceptAction.action(driver);
+                else if (item instanceof com.atypon.automationframework.actions.AlertAcceptAction){
+                    com.atypon.automationframework.actions.AlertAcceptAction.action(driver);
                 }
                 else if (item instanceof com.atypon.automationframework.config.ValidateText){
                     System.out.println("hello");

@@ -38,7 +38,7 @@
             <param id = "state" type="fillFromKeyboard" value="Jordan"/>
             <param id = "pinno" type="fillFromKeyboard" value="850345"/>
             <param id = "telephoneno" type="fillFromKeyboard" value="4636735"/>
-            <param id = "emailid" type="fillFromKeyboard" value="hell8ooooo@example.com"/>
+            <param id = "emailid" type="fillFromKeyboard" value="hellbj8opoooojk@example.com"/>
             <param id = "password" type="fillFromKeyboard" value="12345678"/>
         </form>
         <getText id = "//table/tbody/tr[4]/td[2]"  key="customerId"/>

@@ -37,7 +37,7 @@
             <param id = "state" type="fillFromKeyboard" value="Jordan"/>
             <param id = "pinno" type="fillFromKeyboard" value="850345"/>
             <param id = "telephoneno" type="fillFromKeyboard" value="4636735"/>
-            <param id = "emailid" type="fillFromKeyboard" value="hell8ooooooo@example.com"/>
+            <param id = "emailid" type="fillFromKeyboard" value="hioi@example.com"/>
             <param id = "password" type="fillFromKeyboard" value="12345678"/>
         </form>
         <validate-text value="Customer Registered Successfully!!!"/>

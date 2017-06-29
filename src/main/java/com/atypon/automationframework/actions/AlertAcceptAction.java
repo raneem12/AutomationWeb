@@ -1,5 +1,6 @@
-package com.atypon.automationframework.config;
+package com.atypon.automationframework.actions;
 
+import com.atypon.automationframework.config.Item;
 import org.openqa.selenium.WebDriver;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +14,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AlertAcceptAction extends Item
 {
-    public static void action(WebDriver driver){
+    public void doAction(WebDriver driver) {
         driver.switchTo().alert().accept();
     }
 
-    public void doAction(WebDriver driver) {
-
-    }
 }

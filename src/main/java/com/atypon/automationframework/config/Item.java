@@ -1,5 +1,6 @@
 package com.atypon.automationframework.config;
 
+import com.atypon.automationframework.actions.AlertAcceptAction;
 import org.openqa.selenium.WebDriver;
 
 import javax.xml.bind.annotation.XmlSeeAlso;
