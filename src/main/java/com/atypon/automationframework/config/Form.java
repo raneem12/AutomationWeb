@@ -54,7 +54,7 @@ public class Form extends Item
 
 
     public  void doAction(WebDriver driver) {
-      new FormAction().fillForm(this.getParams(),driver);
+
       new FormAction().action(driver,this);
     }
 
