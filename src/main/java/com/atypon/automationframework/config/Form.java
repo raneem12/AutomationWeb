@@ -17,13 +17,7 @@ import java.util.Map;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Form extends Item
 {
-    public static Map<String, String> getHashMap() {
-        return hashMap;
-    }
 
-    public static void setHashMap(Map<String, String> hashMap) {
-        Form.hashMap = hashMap;
-    }
 
     public ArrayList<SetText> getSetTexts() {
         return setTexts;
@@ -33,7 +27,6 @@ public class Form extends Item
         this.setTexts = setTexts;
     }
 
-    static Map<String,String> hashMap = new HashMap<String, String>();
 
     @XmlAttribute(name ="name")
     private  String formName;
@@ -61,20 +54,8 @@ public class Form extends Item
 
 
     public  void doAction(WebDriver driver) {
-        for (Param param : this.getParams()) {
-            if (param.getType().equals("getFromTestCase"))
-                DriverUtils.findElementByAll(driver, param.getId()).sendKeys(Main.getHashMap().get(param.getValue()));
-            else if (param.getType().equals("fillFromKeyboard"))
-                DriverUtils.findElementByAll(driver, param.getId()).sendKeys(param.getValue());
-            else if (param.getType().equals("radio"))
-                DriverUtils.findElementByAll(driver, param.getId()).click();
-            else if (param.getType().equals("dropdown")) {
-                Select drpAccount = new Select( DriverUtils.findElementByAll(driver, param.getId()));
-                drpAccount.selectByValue(param.getValue());
-            }
-
-        }
-        new FormAction().action(driver,this);
+      new FormAction().fillForm(this.getParams(),driver);
+      new FormAction().action(driver,this);
     }
 
 
