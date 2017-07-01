@@ -1,5 +1,6 @@
 package com.atypon.automationframework.config;
 
+import com.atypon.automationframework.Main;
 import com.atypon.automationframework.drivers.DriverUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

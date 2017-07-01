@@ -26,6 +26,6 @@ public class ClickLink extends Item {
     }
 
     public void doAction(WebDriver driver) {
-        DriverUtils.findElementByAll(driver,getName()).click();
+        DriverUtils.findElementByAll(driver, getName()).click();
     }
 }

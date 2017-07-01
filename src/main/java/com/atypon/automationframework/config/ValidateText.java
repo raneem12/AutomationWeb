@@ -1,8 +1,8 @@
 package com.atypon.automationframework.config;
 
-import com.atypon.automationframework.testReport.Reporter;
-import org.openqa.selenium.*;
+import com.atypon.automationframework.report.Reporter;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.WebDriver;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -39,12 +39,11 @@ public class ValidateText extends Item {
     }
 
     public void doAction(WebDriver driver) {
-        if (type.equals("alert")){
-            Alert alert =driver.switchTo().alert();
+        if (type.equals("alert")) {
+            Alert alert = driver.switchTo().alert();
             String alertMessage = alert.getText();
-            Reporter.report(driver,alertMessage,value);
-        }
-        else
+            Reporter.report(driver, alertMessage, value);
+        } else
             Reporter.report(driver, value);
 
        /* if (driver.getPageSource().contains(value)) {

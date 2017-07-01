@@ -1,8 +1,11 @@
-package com.atypon.automationframework.config;
+package com.atypon.automationframework;
 
+import com.atypon.automationframework.config.Item;
+import com.atypon.automationframework.config.Scenario;
+import com.atypon.automationframework.config.TestCase;
 import com.atypon.automationframework.drivers.DriverManager;
 import com.atypon.automationframework.drivers.DriversInfo;
-import com.atypon.automationframework.testReport.Reporter;
+import com.atypon.automationframework.report.Reporter;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;
 
@@ -31,7 +34,7 @@ public class Main {
     }
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ChromeDriverManager.getInstance().setup();
 
         driver = DriverManager.get().newInstance(DriversInfo.CHROME);

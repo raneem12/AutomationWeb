@@ -57,7 +57,7 @@
 
     <test-case name="logout">
         <click-link name="Log out"/>
-        <validate-text value="You Have Succesfully Logged Out!!" type = "alert"/>
+        <validate-text value="You Have Succesfully Logged Out!!" type="alert"/>
         <AcceptAlertAction/>
     </test-case>
 </senario>
