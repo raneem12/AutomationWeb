@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
-@XmlRootElement(name ="notvalidate-text")
+@XmlRootElement(name = "notvalidate-text")
 public class NotText {
 
     @XmlAttribute(name = "value")

@@ -1,22 +1,19 @@
 package com.atypon.automationframework.config;
 
-import com.atypon.automationframework.actions.FormAction;
 import com.atypon.automationframework.drivers.DriverUtils;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by rzzayed on 6/21/17.
  */
 @XmlRootElement(name = "form")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Form extends Item
-{
+public class Form extends Item {
 
 
     public ArrayList<SetText> getSetTexts() {
@@ -28,8 +25,8 @@ public class Form extends Item
     }
 
 
-    @XmlAttribute(name ="name")
-    private  String formName;
+    @XmlAttribute(name = "name")
+    private String formName;
 
     public String getFormName() {
         return formName;
@@ -40,9 +37,9 @@ public class Form extends Item
     }
 
     @XmlElement(name = "param")
-    private ArrayList<Param>params;
+    private ArrayList<Param> params;
     @XmlElement(name = "setText")
-    private ArrayList<SetText>setTexts;
+    private ArrayList<SetText> setTexts;
 
     public ArrayList<Param> getParams() {
         return params;
@@ -53,10 +50,21 @@ public class Form extends Item
     }
 
 
-    public  void doAction(WebDriver driver) {
+    public void doAction(WebDriver driver) {
+        for (Param param : params) {
+            WebElement element = DriverUtils.findElementByAll(driver, param.getId());
+            if (param.getType().equals("getFromTestCase"))
+                element.sendKeys(Main.getHashMap().get(param.getValue()));
+            else if (param.getType().equals("fillFromKeyboard"))
+                element.sendKeys(param.getValue());
+            else if (param.getType().equals("radio"))
+                element.click();
+            else if (param.getType().equals("dropdown")) {
+                Select drpAccount = new Select(element);
+                drpAccount.selectByValue(param.getValue());
+            }
+        }
+        DriverUtils.findElementByAll(driver, getFormName()).submit();
 
-      new FormAction().action(driver,this);
     }
-
-
 }

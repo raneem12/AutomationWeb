@@ -22,6 +22,7 @@ public class DriverUtils {
         }
 
     }
+
     public static WebElement findElementByAll(WebDriver driver, String identifier) {
 
         WebElement element = getBy(driver, By.id(identifier));

@@ -14,8 +14,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "click-link")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ClickLink extends Item {
-    @XmlAttribute(name ="name")
-    private  String name;
+    @XmlAttribute(name = "name")
+    private String name;
 
     public String getName() {
         return name;
@@ -26,6 +26,6 @@ public class ClickLink extends Item {
     }
 
     public void doAction(WebDriver driver) {
-        DriverUtils.findElementByAll(driver, (getName())).click();
+        DriverUtils.findElementByAll(driver,getName()).click();
     }
 }

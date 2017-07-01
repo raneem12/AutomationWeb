@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement(name = "getText")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class GetText extends Item{
+public class GetText extends Item {
 
     @XmlAttribute(name = "id")
     private String id;
@@ -37,7 +37,7 @@ public class GetText extends Item{
     }
 
     public void doAction(WebDriver driver) {
-        Main.getHashMap().put(getKey(),com.atypon.automationframework.drivers.DriverUtils.findElementByAll(driver,getId()).getText());
+        Main.getHashMap().put(getKey(), com.atypon.automationframework.drivers.DriverUtils.findElementByAll(driver, getId()).getText());
 
     }
 }

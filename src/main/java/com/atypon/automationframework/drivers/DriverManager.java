@@ -1,17 +1,16 @@
 package com.atypon.automationframework.drivers;
 
-import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverManager {
-    static  {
+    static {
         /*System.setProperty("", )*/
     }
 
-//    private static class Holder {
-        private static final DriverManager INSTANCE = new DriverManager();
+    //    private static class Holder {
+    private static final DriverManager INSTANCE = new DriverManager();
 //    }
 
     public static DriverManager get() {

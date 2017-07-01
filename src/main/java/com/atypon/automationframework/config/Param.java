@@ -10,8 +10,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement(name = "param")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Param
-{
+public class Param {
     @XmlAttribute(name = "id")
     private String id;
     @XmlAttribute(name = "value")

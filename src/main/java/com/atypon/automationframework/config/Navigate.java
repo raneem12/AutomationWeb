@@ -1,6 +1,5 @@
 package com.atypon.automationframework.config;
 
-import com.atypon.automationframework.actions.UrlAction;
 import org.openqa.selenium.WebDriver;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,9 +12,8 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement(name = "navigate")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Navigate extends Item
-{
-    @XmlAttribute(name ="url")
+public class Navigate extends Item {
+    @XmlAttribute(name = "url")
     private String url;
 
     public String getUrl() {
@@ -26,8 +24,8 @@ public class Navigate extends Item
         this.url = url;
     }
 
-    public  void doAction(WebDriver driver) {
-        new UrlAction().action(driver,this);
+    public void doAction(WebDriver driver) {
+        driver.get(url);
     }
 
 }

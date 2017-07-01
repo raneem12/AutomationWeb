@@ -8,17 +8,13 @@ import java.util.ArrayList;
  */
 @XmlRootElement(name = "test-case")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class TestCase
-{
+public class TestCase {
     @XmlElementRef
-    private ArrayList<Item> items = new ArrayList<Item>() ;
-
+    private ArrayList<Item> items = new ArrayList<Item>();
 
 
     @XmlAttribute(name = "name")
     private String name;
-
-
 
 
     public String getName() {

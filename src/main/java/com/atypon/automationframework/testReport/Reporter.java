@@ -1,6 +1,11 @@
 package com.atypon.automationframework.testReport;
 
-import java.io.*;
+import org.openqa.selenium.WebDriver;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -20,12 +25,22 @@ public class Reporter {
         details = new ArrayList<Result>();
     }
 
-    public static void report(String actualValue, String expectedValue) {
-        if (actualValue.equals(expectedValue)) {
-            Result r = new Result("Pass", "Actual value '" + actualValue + "' matches expected value");
+    public static void report(WebDriver driver,String expectedValue) {
+        if (driver.getPageSource().contains(expectedValue)) {
+            Result r = new Result("Pass", expectedValue);
             details.add(r);
         } else {
-            Result r = new Result("Fail", "Actual value '" + actualValue + "' does not match expected value '" + expectedValue + "'");
+            Result r = new Result("Fail", expectedValue);
+            details.add(r);
+        }
+    }
+
+    public static void report(WebDriver driver,String alertMessage,String expectedValue) {
+        if (alertMessage.equals(expectedValue)) {
+            Result r = new Result("Pass", expectedValue);
+            details.add(r);
+        } else {
+            Result r = new Result("Fail", expectedValue);
             details.add(r);
         }
     }
@@ -39,7 +54,7 @@ public class Reporter {
     public static void writeResults() {
         FileWriter output = null;
         try {
-            String reportIn = new Scanner(new File("/home/rzzayed/Downloads/testtest/src/main/java/com/atypon/automationframework/testReport/report_template.html")).useDelimiter("\\Z").next();
+            String reportIn = new Scanner(new File("C:\\Users\\Raneem\\IdeaProjects\\testtest\\src\\main\\java\\com\\atypon\\automationframework\\testReport\\report_template.html")).useDelimiter("\\Z").next();
             //String reportIn = new String(Files.readAllBytes(Paths.get(templatePath)));
             for (int i = 0; i < details.size(); i++) {
                 reportIn = reportIn.replaceFirst(resultPlaceholder, "<tr><td>" + Integer.toString(i + 1) + "</td><td>" + details.get(i).getResult() + "</td><td>" + details.get(i).getResultText() + "</td></tr>" + resultPlaceholder);
