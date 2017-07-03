@@ -18,7 +18,7 @@
     <test-case name="Login">
         <navigate url="http://demo.guru99.com/V4/index.php"/>
         <validate-text value="Steps To Generate Access"/>
-        <form name="frmLogin">
+        <form name="frmLogin">click link
             <param id="uid" type="getFromTestCase" value="userId"/>
             <param id="password" type="getFromTestCase" value="password"/>
         </form>
@@ -52,7 +52,6 @@
             <param id="selaccount" type="dropdown" value="Current"/>
             <param id="inideposit" type="fillFromKeyboard" value="500"/>
         </form>
-
     </test-case>
 
     <test-case name="logout">

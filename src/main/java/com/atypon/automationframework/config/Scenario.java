@@ -6,10 +6,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 
-/**
- * Created by rzzayed on 6/22/17.
- */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "senario")
 public class Scenario {
@@ -18,10 +14,10 @@ public class Scenario {
 
 
     public ArrayList<TestCase> getTestCases() {
+        if (testCases == null){
+            testCases = new ArrayList<>();
+        }
         return testCases;
     }
 
-    public void setTestCases(ArrayList<TestCase> testCases) {
-        this.testCases = testCases;
-    }
 }

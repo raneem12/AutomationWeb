@@ -24,7 +24,7 @@ public class Navigate extends Item {
         this.url = url;
     }
 
-    public void doAction(WebDriver driver) {
+    public void execute(WebDriver driver) {
         driver.get(url);
     }
 

@@ -18,9 +18,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by rzzayed on 6/21/17.
- */
+
 public class Main {
     private static WebDriver driver;
     private static Map<String, String> hashMap = new HashMap<String, String>();
@@ -51,10 +49,10 @@ public class Main {
             for (TestCase testCase : scenario.getTestCases()) {
                 ArrayList<Item> items = testCase.getItems();
                 for (Item item : items) {
-                    item.doAction(driver);
+                    item.execute(driver);
                 }
             }
-            Reporter.writeResults();
+            Reporter.get().writeResults();
         } catch (JAXBException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {

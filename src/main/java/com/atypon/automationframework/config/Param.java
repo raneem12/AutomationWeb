@@ -5,9 +5,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- * Created by rzzayed on 6/21/17.
- */
 @XmlRootElement(name = "param")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Param {

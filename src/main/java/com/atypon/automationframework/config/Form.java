@@ -2,6 +2,7 @@ package com.atypon.automationframework.config;
 
 import com.atypon.automationframework.Main;
 import com.atypon.automationframework.drivers.DriverUtils;
+import static com.atypon.automationframework.util.StringUtil.equalsIgnoreCase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -51,10 +52,10 @@ public class Form extends Item {
     }
 
 
-    public void doAction(WebDriver driver) {
+    public void execute(WebDriver driver) {
         for (Param param : params) {
             WebElement element = DriverUtils.findElementByAll(driver, param.getId());
-            if (param.getType().equals("getFromTestCase"))
+            if (equalsIgnoreCase(param.getType(), "getFromTestCase"))
                 element.sendKeys(Main.getHashMap().get(param.getValue()));
             else if (param.getType().equals("fillFromKeyboard"))
                 element.sendKeys(param.getValue());

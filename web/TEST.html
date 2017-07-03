@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="TESTJS.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+
+            <form>
+            <table class="table table-bordered table-hover" >
+
+                <tbody id="tab_logic">
+                <tr>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                <span class="caret"></span></button>
+                            <ul  name="action0" class="dropdown-menu">
+                                <li><a href="#">Navigate </a></li>
+                                <li><a href="#">getText</a></li>
+                                <li><a href="#">form</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="text"   placeholder='value' class="form-control"/>
+                    </td>
+                    <td>
+                        <input type="text"  placeholder='id' class="form-control"/>
+                    </td>
+                    <td>
+                        <input type="text"  placeholder='type' class="form-control"/>
+                    </td>
+                    <td>
+                        <input type="text"  placeholder='name' class="form-control"/>
+                    </td>
+
+                </tr>
+
+                </tbody>
+
+            </table>
+            </form>
+        </div>
+    </div>
+    <a id="add_row" class="btn btn-default pull-left" onclick="insRow() ">Add Row</a><a id='delete_row'
+                                                                                        class="pull-right btn btn-default">Delete
+    Row</a>
+</div>
+</body>
+</html>

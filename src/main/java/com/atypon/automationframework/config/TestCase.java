@@ -3,9 +3,6 @@ package com.atypon.automationframework.config;
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 
-/**
- * Created by rzzayed on 6/21/17.
- */
 @XmlRootElement(name = "test-case")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TestCase {

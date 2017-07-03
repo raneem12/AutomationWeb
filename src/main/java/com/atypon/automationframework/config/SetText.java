@@ -5,9 +5,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- * Created by Raneem on 23/06/2017.
- */
 @XmlRootElement(name = "setText")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SetText {

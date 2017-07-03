@@ -37,7 +37,7 @@ public class GetText extends Item {
         this.id = id;
     }
 
-    public void doAction(WebDriver driver) {
+    public void execute(WebDriver driver) {
         Main.getHashMap().put(getKey(), com.atypon.automationframework.drivers.DriverUtils.findElementByAll(driver, getId()).getText());
 
     }

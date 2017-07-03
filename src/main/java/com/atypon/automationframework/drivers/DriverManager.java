@@ -9,12 +9,12 @@ public class DriverManager {
         /*System.setProperty("", )*/
     }
 
-    //    private static class Holder {
-    private static final DriverManager INSTANCE = new DriverManager();
-//    }
+    private static final class Holder {
+        private static final DriverManager INSTANCE = new DriverManager();
+    }
 
     public static DriverManager get() {
-        return INSTANCE;
+        return Holder.INSTANCE;
     }
 
     public WebDriver newInstance(DriversInfo info) {
