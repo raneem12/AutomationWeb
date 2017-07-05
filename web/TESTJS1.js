@@ -1,52 +1,43 @@
 
-var y = 0;
+var y = -1;
 
 $(document).ready(function () {
-/*
-    $('#mid' + y).on("change", function (e) {
-        debugger;
-        var val = $(this).val()
-        switch (val) {
-            case 'getText':
-                $('#value0').hide();
-            case 'navigate' :
-                $('#value0').show();
-        }
-    });*/
+    hide();
+    insRow();
 });
 
-function raneem() {
-    var x = document.getElementById('mid'+y);
-    switch (x.value) {
+function raneem(obj) {
+    var x = $(obj).val();
+    switch (x) {
         case 'getText':
-            $('#value' +y).hide();
-            break;
-        case 'navigate' :
-            $('#value' +y).show();
+            $('#'+obj.dataset.id).hide();
             break;
     }
 }
 
-
+function hide(){
+    $('.hide').hide();
+}
 
 function insRow() {
     y++;
-    console.log('hi');
     var x = document.getElementById('tab_logic');
 
     var new_row = x.rows[0].cloneNode(true);
 
+    new_row.classList.remove("hide");
+    new_row.style.display = "table-row";
 
     //var inp1 = new_row.cells[0].getElementsByTagName('input')[0];
 
     var inp3 = new_row.cells[0].getElementsByTagName('select')[0];
-    inp3.id= 'mid' + y
+    inp3.dataset.id = "value"+y;
+
     inp3.name = 'action' + y;
 
     var inp2 = new_row.cells[1].getElementsByTagName('input')[0];
+    new_row.cells[1].id = 'value' + y;
     inp2.name = 'value' + y;
-    inp2.id = 'value' + y;
-
 
     var inp4 = new_row.cells[2].getElementsByTagName('input')[0];
     inp4.name = 'id' + y;
@@ -57,11 +48,11 @@ function insRow() {
     var inp6 = new_row.cells[4].getElementsByTagName('input')[0];
     inp6.name = 'name' + y;
 
-    /*inp2.value = "";
+    inp2.value = "";
     inp3.value = "";
     inp4.value = "";
     inp5.value = "";
-    inp6.value = "";*/
+    inp6.value = "";
     x.appendChild(new_row);
 }
 

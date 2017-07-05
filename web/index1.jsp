@@ -29,27 +29,26 @@
 
                     <tbody id="tab_logic" >
 
-                    <tr >
+                    <tr class="hide">
                         <td>
-                            <select  name = "action0" class="form-control " onchange="raneem(this)"  id="mid0">
-                                    <option value="navigate">Navigate</option>
-                                    <option value="clickLink">ClickLink</option>
-                                    <option value="getText">getText</option>
-                                    <option value="form" id="0">Form</option>
-                                    <option>Param</option>
-
-                                </select>
+                            <select  name = "action0" class="form-control" onchange="raneem(this)" >
+                                <option value="navigate">Navigate</option>
+                                <option value="clickLink">ClickLink</option>
+                                <option value="getText">getText</option>
+                                <option value="form" >Form</option>
+                                <option>Param</option>
+                            </select>
                         </td>
-                        <td>
-                            <input  type="text"  id="value0" name="value0" placeholder='value' class="form-control"/>
+                        <td id="value-1">
+                            <input  type="text"  name="value0" placeholder='value' class="form-control"/>
                         </td>
                         <td>
                             <input type="text" name="id0" placeholder='id' class="form-control"/>
                         </td>
                         <td>
-                           <%-- <input type="text"  placeholder='type' class="form-control"/>--%>
+                            <%-- <input type="text"  placeholder='type' class="form-control"/>--%>
 
-                        <select  name = "type0" class="form-control">
+                            <select  name = "type0" class="form-control">
                                 <option>fillFromKeyboard</option>
                                 <option>radio</option>
                                 <option>getFromTestCase</option>
@@ -59,8 +58,6 @@
                         <td>
                             <input type="text"  name="name0" placeholder='name' class="form-control"/>
                         </td>
-
-
 
                     </tr>
                     <tr>

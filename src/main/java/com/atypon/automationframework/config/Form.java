@@ -44,6 +44,8 @@ public class Form extends Item {
     private ArrayList<SetText> setTexts;
 
     public ArrayList<Param> getParams() {
+        if (params ==null)
+            return params = new ArrayList<>();
         return params;
     }
 
