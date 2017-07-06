@@ -19,8 +19,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class Main {
-    private static WebDriver driver;
+public class Main{
+        public static final String MY_DIR = "/home/rzzayed/Downloads/testtest (2)/myFiles";
+
+
+        private static WebDriver driver;
     private static Map<String, String> hashMap = new HashMap<String, String>();
 
     public static Map<String, String> getHashMap() {
@@ -43,7 +46,7 @@ public class Main {
         try {
             context = JAXBContext.newInstance(Scenario.class);
             Unmarshaller um = context.createUnmarshaller();
-            Scenario scenario = (Scenario) um.unmarshal(new FileReader("regNew.xml"));
+            Scenario scenario = (Scenario) um.unmarshal(new FileReader(MY_DIR + "/simple.xml"));
             Reporter.initialize();
 
             for (TestCase testCase : scenario.getTestCases()) {

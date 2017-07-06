@@ -25,6 +25,7 @@
         <div class="col-md-12 column">
 
             <form action="hi" >
+
                 <table class="table table-bordered table-hover" >
 
                     <tbody id="tab_logic" >
@@ -32,24 +33,28 @@
                     <tr >
                         <td>
                             <select  name = "action0" class="form-control " onchange="raneem(this)"  id="mid0">
-                                    <option value="navigate">Navigate</option>
-                                    <option value="clickLink">ClickLink</option>
-                                    <option value="getText">getText</option>
-                                    <option value="form" id="0">Form</option>
-                                    <option>Param</option>
+                                <option></option>
+                                <option value="navigate">Navigate</option>
+                                <option value="clickLink">ClickLink</option>
+                                <option value="getText">getText</option>
+                                <option value="form" id="0">Form</option>
+                                <option value="param">Param</option>
+                                <option value="test">TestCase</option>
 
-                                </select>
+
+                            </select>
+                        </td>
+
+                        <td>
+                            <input type="text"  id="id0" name="id0" placeholder='id' class="form-control"/>
                         </td>
                         <td>
                             <input  type="text"  id="value0" name="value0" placeholder='value' class="form-control"/>
                         </td>
                         <td>
-                            <input type="text" name="id0" placeholder='id' class="form-control"/>
-                        </td>
-                        <td>
-                           <%-- <input type="text"  placeholder='type' class="form-control"/>--%>
+                            <%-- <input type="text"  placeholder='type' class="form-control"/>--%>
 
-                        <select  name = "type0" class="form-control">
+                            <select  id = "type0" name = "type0" class="form-control">
                                 <option>fillFromKeyboard</option>
                                 <option>radio</option>
                                 <option>getFromTestCase</option>
@@ -57,10 +62,11 @@
                             </select>
                         </td>
                         <td>
-                            <input type="text"  name="name0" placeholder='name' class="form-control"/>
+                            <input type="text"   id="name0"  name="name0" placeholder='name' class="form-control"/>
                         </td>
 
 
+                        <a  class="btn btn-default pull-left" id="testCase0" onclick="insTestCase()">+ New TestCase</a>
 
                     </tr>
                     <tr>
@@ -73,7 +79,6 @@
 
                 </table>
                 <a  class="btn btn-default pull-left" onclick="insRow()">Add Row</a>
-                <a  class="btn btn-default pull-left" onclick="insRow1()">Add param</a>
 
                 <button type="submit" value="submit" ></button>
             </form>
