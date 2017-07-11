@@ -20,7 +20,7 @@ import java.util.Map;
 
 
 public class Main{
-        public static final String MY_DIR = "/home/rzzayed/Downloads/testtest (2)/myFiles";
+        public static final String MY_DIR = "/home/rzzayed/Downloads/WebBasedAutomationFramework/myFiles";
 
 
         private static WebDriver driver;

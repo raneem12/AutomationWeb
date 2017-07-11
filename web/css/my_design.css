@@ -1,0 +1,10 @@
+body {
+    background: #49a99f;
+}
+
+.container {
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 50px;
+    background: lightgray;
+}

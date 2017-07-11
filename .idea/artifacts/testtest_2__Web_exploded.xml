@@ -2,10 +2,10 @@
   <artifact type="exploded-war" name="testtest(2):Web exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/testtest_2__Web_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="testtest(2)/web/Web" />
+      <element id="javaee-facet-resources" facet="WebBasedAutomationFramework/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="testtest(2)" />
+          <element id="module-output" name="WebBasedAutomationFramework" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: cglib:cglib-nodep:3.2.4" />
